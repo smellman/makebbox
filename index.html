@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>Make Bounding Box Query Parameter</title>
+    <link rel="stylesheet" href="./js/vendor/leaflet/leaflet.css" />
+    <link rel="stylesheet" href="./js/vendor/leaflet.draw/leaflet.draw.css" />
+    <script src="./js/vendor/leaflet/leaflet.js"></script>
+    <script src="./js/vendor/leaflet.draw/leaflet.draw.js"></script>
+    <script src="./js/vendor/leaflet-hash/leaflet-hash.js"></script>
+    <script src="./js/map.js"></script>
+    <script src="./js/vendor/jquery/jquery-2.1.3.min.js"></script>
+    <style>
+     #map {
+       height: 400px;
+       width: 100%;
+     }
+     #result_box {
+       width: 100%;
+     }
+    </style>
+  </head>
+  <body onload="init();">
+    <h1>Make Bounding Box Query Parameter</h1>
+    <div id="map"></div>
+    <div id="result_box">
+      <div id="bbox">
+        BBox query: <span id="bbox_query"></span>
+      </div>
+      <div id="postgis">
+        PostGIS Query: <span id="postgis_query"></span>
+      </div>
+    </div>
+  </body>
+</html>
