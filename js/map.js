@@ -44,9 +44,9 @@ var init = function() {
         }
         extentLayer = e.layer;
         map.addLayer(extentLayer);
-        console.log(extentLayer.getBounds().toBBoxString());
         $('#bbox_query').text(extentLayer.getBounds().toBBoxString());
         // ST_MakeEnvelope($long_min, $lat_min, $long_max, $lat_max, 4326);
         $('#postgis_query').text("ST_MakeEnvelope(" + extentLayer.getBounds().toBBoxString() + ",4326)");
+        $('#phyghtmap_query').text(extentLayer.getBounds().toBBoxString().split(",").join(":"));
     });
 };
